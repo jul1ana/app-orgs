@@ -1,9 +1,10 @@
 import React from "react";
 import { Image, StyleSheet, View } from "react-native";
 
+import Button from "../../../components/Button";
 import TextParaph from "../../../components/TextParaph";
 
-export default function Details({ name, logoFarm, nameFarm, description, price }) {
+export default function Details({ name, logoFarm, nameFarm, description, price, button }) {
   return (
     <>
       <TextParaph style={styles.name}>{name}</TextParaph>
@@ -13,6 +14,8 @@ export default function Details({ name, logoFarm, nameFarm, description, price }
       </View>
       <TextParaph style={styles.description}>{description}</TextParaph>
       <TextParaph style={styles.price}>{price}</TextParaph>
+
+      <Button text={button} style={styles.button} onPress={() => { }} />
     </>
   );
 }
@@ -56,5 +59,9 @@ const styles = StyleSheet.create({
     fontSize: 26,
     lineHeight: 42,
     marginTop: 8
+  },
+
+  button: {
+    marginTop: 16
   }
 });
